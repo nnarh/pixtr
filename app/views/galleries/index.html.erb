@@ -1,0 +1,8 @@
+<!--<a href="/galleries/new">New Gallery</a> use link_to helper method -->
+<h2>Galleries</h2>
+<%= link_to "New Gallery", "/galleries/new" %>
+<% @galleries.each do |gallery| %>
+<div>
+  <%= link_to gallery.name, "galleries/#{gallery.id}" %>
+</div>
+<% end %>

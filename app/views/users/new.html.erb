@@ -1,0 +1,10 @@
+<h2>Sign up</h2>
+
+<%= form_for(@user) do |form| %>
+  <%= render "errors", object: form.object %>
+    <div> 
+      <%= form.label :email %>
+      <%= form.email_field :email %>
+    </div>
+    <%= form.submit "Sign Up" %>
+<% end %>

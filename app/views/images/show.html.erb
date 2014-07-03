@@ -1,0 +1,12 @@
+<nav>
+  <%= link_to @gallery.name, @gallery %>
+</nav>
+
+<h2><%= @image.name %></h2>
+<p><%= @image.description %></p>
+
+<%= image_tag @image.url, width:200 %>
+<nav>
+<%= link_to "Edit", edit_gallery_image_path(@gallery, @image) %>
+<%= link_to "Destroy", gallery_image_path, method: :delete %>
+</nav>
