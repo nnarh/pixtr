@@ -1,3 +1,8 @@
-<h1>Edit <%=@gallery.name %></h1>
+<h1>Edit <%= @gallery.name %></h1>
 
-<%= render "form", gallery: @gallery, image: @image %>
+<%= form_for(@gallery) do |form| %>
+  <%= render form %>
+  <%= form.submit "Update" %>
+<% end %>
+
+

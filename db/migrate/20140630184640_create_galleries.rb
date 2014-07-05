@@ -7,3 +7,4 @@ class CreateGalleries < ActiveRecord::Migration
     end
   end
 end
+ 
