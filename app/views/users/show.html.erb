@@ -1,0 +1,7 @@
+<div><%= @user.email%>'s Galleries</div>
+<%= link_to "New Gallery", "/galleries/new" %>
+<ul>
+  <% @user.galleries.each do |gallery| %>
+    <li><%= link_to gallery.name, gallery %></li>
+  <% end %>
+</ul>

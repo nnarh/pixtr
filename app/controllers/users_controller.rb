@@ -12,11 +12,14 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
+ def show
+   @user = current_user
+ end 
 private
 
   def user_params
     params.require(:user).#can go to new line with period here
-    permit(:email)
+    permit(:email, :password)
   end
 end
