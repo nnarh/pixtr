@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "galleries#index"#renders 0.0.0.0:3000 to index page that lists galleries
+  root to: "homes#show"#renders 0.0.0.0:3000 to index page that lists galleries
   resource :session, only: [:new, :create, :destroy, :show]
   resources :users, only: [:new, :create]
   resources :galleries do #this will replace all routes below!!

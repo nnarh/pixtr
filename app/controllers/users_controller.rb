@@ -4,9 +4,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to galleries_path
+    @user = sign_up(user_params)
+    if @user.valid?
+     sign_in(@user) 
+     redirect_to galleries_path
     else
       render :new
     end
